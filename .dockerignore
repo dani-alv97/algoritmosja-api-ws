@@ -1,0 +1,8 @@
+.git
+.mvn
+.metadata
+.settings
+target
+*.md
+*.iml
+*.class

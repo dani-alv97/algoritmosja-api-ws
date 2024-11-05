@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .  
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/algoritmosjabank  # Cambia localhost a "db" y usa el puerto 3306
+      - SPRING_DATASOURCE_USERNAME=algoritmosja
+      - SPRING_DATASOURCE_PASSWORD=123
+    ports:
+      - "8080:8080"
+    networks:
+      - algoritmosja-network
+
+networks:
+  algoritmosja-network:
+    external: true
